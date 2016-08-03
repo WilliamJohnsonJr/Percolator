@@ -13,7 +13,7 @@ function HomeController ($scope, DataService){
 		});
 	};
 
-	profileCallByEmail
+	profileCallByEmail(vm.registrant);
 
 }
 
