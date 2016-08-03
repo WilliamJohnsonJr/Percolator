@@ -1,9 +1,16 @@
 function DataService ($http, SERVER, headers) {
-
 	this.getProfileByEmail = getProfileByEmail;
 
 	function getProfileByEmail (registrant){
-		$http.post(SERVER.URL + "score/score_one/by_email/", registrant.email, headers);
+		console.log(registrant)
+			var req = {
+				 method: 'POST',
+				 url: SERVER.URL + "profile/find_one/by_email/full",
+				 headers: headers,
+				 data: {email: registrant.email},
+				 json: true
+				}
+		return $http(req);
 	}
 }
 
