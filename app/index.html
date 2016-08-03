@@ -8,8 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body ng-app="app">
-    <div class="container" ng-controller="HomeController">
-      <p>{{vm.profile}}</p>
+    <div class="container" ng-controller="HomeController as vm">
+      <div class="output" ng-repeat="profile in vm.profiles">
+        <div class="profileName">
+          Registrant Name: {{profile.identity.full_name}}
+        </div>
+        <div class="netWorth">
+          Net Worth: {{profile.wealth.networth.text}}
+        </div>
+        <div class="giftCapacity">
+          Gift Capacity: {{profile.giving.gift_capacity.text}}
+        </div>
     </div>
     <script src="js/bundle.js"></script>
   </body>

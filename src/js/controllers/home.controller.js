@@ -2,7 +2,7 @@ function HomeController ($scope, DataService){
 
 	let vm = this;
 	vm.profileCallByEmail = profileCallByEmail;
-	vm.profile = {};
+	vm.profiles = [];
 	vm.registrant = {
 		email: "frank@gmail.com"
 	};
@@ -10,7 +10,8 @@ function HomeController ($scope, DataService){
 	function profileCallByEmail(registrant){
 		DataService.getProfileByEmail(registrant).then((res)=>{
 			console.log(res.data);
-			vm.profile = res.data;
+			vm.profiles.push(res.data);
+			console.log(vm.profiles);
 		});
 	};
 
