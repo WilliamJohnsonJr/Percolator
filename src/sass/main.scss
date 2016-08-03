@@ -1,0 +1,31 @@
+@import 'bulma';
+
+.hero {
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.heroContainer {
+	display: flex;
+	align-items: center;
+}
+
+.logoContainer {
+	width: 118px;
+	height: 153px;
+	img {
+	width: 100%;
+	}
+}
+
+.titlesContainer {
+	margin-left: 10px;
+}
+
+.title {
+	font-size: 40px;
+}
+
+.output {
+	padding: 10px;
+}
